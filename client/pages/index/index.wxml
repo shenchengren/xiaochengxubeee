@@ -1,0 +1,76 @@
+<!--index.wxml-->
+<!--<view class="container">
+    <view class="userinfo" bindtap="login">
+        <image
+            class="userinfo-avatar"
+            src="{{logged ? userInfo.avatarUrl : './user-unlogin.png'}}"
+            background-size="cover"
+        ></image>
+        <view>
+            <text class="userinfo-nickname">{{logged ? userInfo.nickName : '点击测试登录接口'}}</text>
+            <text class="userinfo-nickname" wx:if="{{logged}}">{{userInfo.lastLoginTime}}</text>
+        </view>
+    </view>
+
+    <view class="tunnel">
+        <view class="tunnel-text uploader-text">
+            <text bindtap="doRequest">请求（是否带有登陆态）</text>
+            <switch class="tunnel-switch" bindchange="switchRequestMode" color="#007AFF"/>
+        </view>
+        <view class="tunnel-text" wx:if="{{requestResult}}">
+            <text class="request-text">{{'请求结果：' + requestResult}}</text>
+        </view>
+    </view>
+
+    <view class="uploader">
+        <view class="uploader-text" bindtap="doUpload">
+            <text>上传图片</text>
+        </view>
+        <view class="uploader-container" wx:if="{{imgUrl}}">
+            <image
+                class="uploader-image"
+                src="{{imgUrl}}"
+                mode="aspectFit"
+                bindtap="previewImg"
+            ></image>
+        </view>
+    </view>
+
+    <view class="tunnel">
+        <view class="tunnel-text">
+            <text>信道</text>
+            <switch class="tunnel-switch" bindchange="switchChange" color="#007AFF"/>
+        </view>
+        <view class="tunnel-text {{ tunnelStatus && tunnelStatus === 'connected' ? 'active' : 'disable' }}" bindtap="sendMessage">
+            <text>发送消息</text>
+        </view>
+    </view>
+
+    <view class="uploader">
+        <navigator url="../addCgi/addCgi" open-type="navigate" class="uploader-text">
+            <text>快速增加 CGI</text>
+        </navigator>
+    </view>
+</view>-->
+<view class="box">
+  <!-- <view class="tips">[强化生命（100）：D][强化飞机（300）：F]</view> -->
+  <view class="tips">
+    <view>扣除积分100可加血量</view>
+    <view>扣除积分300强化子弹</view>
+    <view>血量-->一次不死</view>
+    <view>子弹-->一次发2发子弹</view>
+  </view>
+  <view class="start" bindtap='startfn'>开始游戏</view>
+  <view class="end" style="display: none;">游戏通关</view>
+  <!-- <view class="lottery">枪</view> -->
+</view>
+<view class="btn">
+  <view class='first'>
+    <view class="sp hp">血量</view>
+    <view class="sp bl">子弹</view>
+  </view>
+  <view class='last'>
+    <view class="sp left">向左</view>
+    <view class="sp right">向右</view>
+  </view>
+</view>
